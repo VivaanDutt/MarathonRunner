@@ -26,6 +26,7 @@ function setup(){
 
 
 function draw(){
+  background("bgbg.jpeg");
   if(playerCount === 4){
     game.update(1);
   }

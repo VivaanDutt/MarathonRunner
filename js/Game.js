@@ -43,7 +43,7 @@ class Game {
       player.getRunnersAtEnd();
       
       if(allPlayers !== undefined) {
-        background(rgb(198,135,103));
+        background("bgbg.jpeg");
         image(track, -displayWidth*4, 0,displayWidth * 5, displayHeight);
         var index = 0;
         var x;
