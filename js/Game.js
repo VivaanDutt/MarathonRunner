@@ -52,8 +52,8 @@ class Game {
       if(allPlayers !== undefined) {
         image(track, -displayWidth/10, 0, displayWidth * 5, displayHeight);
         var index = 0;
-        var x;
-        var y = 175;
+        var x = 20;
+        var y = displayHeight/12;
   
         for(var plr in allPlayers) {
           index += 1;
@@ -75,11 +75,12 @@ class Game {
       }
   
       if(keyIsDown(UP_ARROW) && player.index !== null){
-        player.distance += 10
+        console.log(player.distance);
+        player.distance -= 20
         player.update();
       }
   
-      if(player.distance > 3860){
+      if(player.distance < -7080){
         gameState = 2;
         player.rank += 1;
         Player.updateRunnersAtEnd(player.rank)
@@ -88,5 +89,8 @@ class Game {
       player.getRunnersAtEnd();
       drawSprites();
     }
-  
+    
+    end() {
+      alert("Game Over!");
+    }
   }
